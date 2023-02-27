@@ -47,5 +47,5 @@ def teach_Dash(request):
     return render(request,'teacher.html',context={})
 def dummy(request):
     return render(request,'dummy.html',context={})
-def attendance(request):
+#def attendance(request):
     
