@@ -12,3 +12,10 @@ class marks(models.Model):
     ("can_add_marks", "Can add data"),
     ("can_view_marks", "Can view data"),
     ]
+
+class attendance(models.Model):
+  Student = models.CharField(max_length=254)
+  Date = models.DateField()
+  Morning = models.BooleanField()
+  Afternoon = models.BooleanField()
+  Percentage = models.CharField(max_length=254)

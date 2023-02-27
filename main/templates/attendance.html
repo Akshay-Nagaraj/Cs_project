@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" title="Coding design">
+
+
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+<link rel="stylesheet" href="style2.css">
+
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="{% static 'att_style.css' %}">
+</head>
+
+<body>
+    <main class="table">
+        <section class="table__header">
+            <h1>Attendance</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="{% static 'pdf.jpeg' %}" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="{% static 'xls.jped' %}" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Student <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Morning </th>
+                        <th> Afternoon </th>
+                        <th> Percentage <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 5001 </td>
+                        <td> Anish</td>
+                        <td> 1 </td>
+                        <td> <body>
+                            <div class="checkbox">
+                              <input type="checkbox" id="click">
+                              <label for="click" class="text"></label>
+                            </div>
+                        
+                          </body> </td>
+                        <td>
+                            <body>
+                                <div class="checkbox">
+                                  <input type="checkbox" id="click">
+                                  <label for="click" class="text"></label>
+                                </div>
+                            
+                              </body>
+                        </td>
+                        <td> <strong> 90% </strong></td>
+                    </tr>
+                    <tr>
+                        <td> 5002 </td>
+                        <td> Akshay</td>
+                        <td> 2 </td>
+                        <td> <body>
+                            <div class="checkbox">
+                              <input type="checkbox" id="click">
+                              <label for="click" class="text"></label>
+                            </div>
+                        
+                          </body> </td>
+                        <td>
+                            <body>
+                                <div class="checkbox">
+                                  <input type="checkbox" id="click">
+                                  <label for="click" class="text"></label>
+                                </div>
+                            
+                              </body>
+                        </td>
+                        <td> <strong> 90% </strong></td>
+                    </tr>
+                    <tr>
+                        <td> 5003 </td>
+                        <td> Vybhav</td>
+                        <td> 3 </td>
+                        <td> <body>
+                            <div class="checkbox">
+                              <input type="checkbox" id="click">
+                              <label for="click" class="text"></label>
+                            </div>
+                        
+                          </body> </td>
+                        <td>
+                            <body>
+                                <div class="checkbox">
+                                  <input type="checkbox" id="click">
+                                  <label for="click" class="text"></label>
+                                </div>
+                            
+                              </body>
+                        </td>
+                        <td> <strong> 90% </strong></td>
+                    </tr>
+                    <tr>
+                        <td> 5004 </td>
+                        <td> Atul</td>
+                        <td> 4 </td>
+                        <td> <body>
+                            <div class="checkbox">
+                              <input type="checkbox" id="click">
+                              <label for="click" class="text"></label>
+                            </div>
+                        
+                          </body> </td>
+                        <td>
+                            <body>
+                                <div class="checkbox">
+                                  <input type="checkbox" id="click">
+                                  <label for="click" class="text"></label>
+                                </div>
+                            
+                              </body>
+                        </td>
+                        <td> <strong> 90% </strong></td>
+                    </tr>
+                    <tr>
+                        <td> 5005 </td>
+                        <td> Yashas</td>
+                        <td> 5 </td>
+                        <td> <body>
+                            <div class="checkbox">
+                              <input type="checkbox" id="click">
+                              <label for="click" class="text"></label>
+                            </div>
+                        
+                          </body> </td>
+                        <td>
+                            <body>
+                                <div class="checkbox">
+                                  <input type="checkbox" id="click">
+                                  <label for="click" class="text"></label>
+                                </div>
+                            
+                              </body>
+                        </td>
+                        <td> <strong> 90% </strong></td>
+                    </tr>
+                    <tr>
+                        <td> 5006 </td>
+                        <td> Santosh</td>
+                        <td> 6 </td>
+                        <td> <body>
+                            <div class="checkbox">
+                              <input type="checkbox" id="click">
+                              <label for="click" class="text"></label>
+                            </div>
+                        
+                          </body> </td>
+                        <td>
+                            <body>
+                                <div class="checkbox">
+                                  <input type="checkbox" id="click">
+                                  <label for="click" class="text"></label>
+                                </div>
+                            
+                              </body>
+                        </td>
+                        <td> <strong> 90% </strong></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
