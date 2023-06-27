@@ -1,0 +1,8 @@
+<form method="POST">
+{% csrf_token %}
+{% for i in form %}
+{{i.label}} : {{i}}
+<br><br><br>
+{% endfor %}
+</form>
+<input type="submit" value="Submit">

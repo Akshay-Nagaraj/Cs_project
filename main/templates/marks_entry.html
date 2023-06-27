@@ -1,0 +1,549 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{% static 'Marks.css' %}">
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap' rel='stylesheet'>
+
+	<title></title>
+</head>
+
+
+<div class="layout has-sidebar fixed-sidebar fixed-header">
+  <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+    <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+    <div class="image-wrapper">
+      <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
+    </div>
+    <div class="sidebar-layout">
+      <div class="sidebar-header">
+        <div class="pro-sidebar-logo">
+          <div>E</div>
+          <h5>Eduportal</h5>
+        </div>
+      </div>
+      <div class="sidebar-content">
+        <nav class="menu open-current-submenu">
+          <ul>
+            <li class="menu-item">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-home-line"></i>
+                </span>
+                <span class="menu-title">Home</span>
+              </a>
+            </li>
+
+            <li class="menu-header"><span> GENERAL </span></li>
+            <li class="menu-item sub-menu">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-home-line"></i>
+                </span>
+                <span class="menu-title">Branched drop down</span>
+
+              </a>
+              <div class="sub-menu-list">
+                <ul>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Submenu 1</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Submenu 2</span>
+                    </a>
+                  </li>
+                  <li class="menu-item sub-menu">
+                    <a href="#">
+                      <span class="menu-title">Submenu 3 with branch</span>
+                    </a>
+                    <div class="sub-menu-list">
+                      <ul>
+                        <li class="menu-item">
+                          <a href="#">
+                            <span class="menu-title">Submenu 2.1</span>
+                          </a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="#">
+                            <span class="menu-title">Submenu 2.2</span>
+                          </a>
+                        </li>
+                        <li class="menu-item sub-menu">
+                          <a href="#">
+                            <span class="menu-title">Submenu 2.3 with branch</span>
+                          </a>
+                          <div class="sub-menu-list">
+                            <ul>
+                              <li class="menu-item">
+                                <a href="#">
+                                  <span class="menu-title">Submenu 3</span>
+                                </a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="#">
+                                  <span class="menu-title">Submenu 3.2</span>
+                                </a>
+                              </li>
+                              <li class="menu-item sub-menu">
+                                <a href="#">
+                                  <span class="menu-title">Submenu 3.3 with branch </span>
+                                  <span class="menu-suffix">&#x1F914;</span>
+                                </a>
+                                <div class="sub-menu-list">
+                                  <ul>
+                                    <li class="menu-item">
+                                      <a href="#">
+                                        <span class="menu-title">Final sub </span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item sub-menu">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-bar-chart-2-fill"></i>
+                </span>
+                <span class="menu-title">Marks</span>
+              </a>
+              <div class="sub-menu-list">
+                <ul>
+                  <li class="menu-item">
+                    <a href="marks.html">
+                      <span class="menu-title">Marks Entry</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Marks by Student</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+
+             <li class="menu-item sub-menu">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-bar-chart-2-fill"></i>
+                </span>
+                <span class="menu-title">Attendance</span>
+              </a>
+              <div class="sub-menu-list">
+                <ul>
+                  <li class="menu-item">
+                    <a href="att.html">
+                      <span class="menu-title">My Class</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Bulk Attendance</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-item sub-menu">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-bar-chart-2-fill"></i>
+                </span>
+                <span class="menu-title">Search</span>
+              </a>
+              <div class="sub-menu-list">
+                <ul>
+                  <li class="menu-item">
+                    <a href="att.html">
+                      <span class="menu-title">Student Search</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Staff Search</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+
+
+
+            </li>
+            <li class="menu-header" style="padding-top: 20px"><span> Personal </span></li>
+            <li class="menu-item">
+              <a href="task.html">
+                <span class="menu-icon">
+                  <i class="ri-pencil-fill"></i>
+                </span>
+                <span class="menu-title">Calendar</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+  </aside>
+  <div id="overlay" class="overlay"></div>
+  <div class="layout">
+    <main class="content">
+      <div>
+        <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
+          <i class="ri-menu-line ri-xl"></i>
+        </a>
+
+       <div>
+        <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
+          <i class="ri-menu-line ri-xl"></i>
+        </a>
+        <!-- Heading -->
+        <h1 style="margin-bottom: 0">Marks</h1>
+        <!-- Heading END -->
+
+        <!-- Content -->
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+          <style>
+            .box {
+              border-radius: 17px;
+              border: 2px solid #7d84ab;
+              padding: 20px;
+              padding-left: 10px;
+              width: 1200px;
+              height: 100px;
+            }
+          </style>
+        </head>
+
+        <body>
+          <div class="box">
+            <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            {{field.label}}{{field}}
+            {% endfor %}
+            <input type="submit" value="Submit">
+            </form>
+            <span style="color: white;">---</span>
+
+          </div>
+          <span style="color: white;">-</span>
+          <table width="100%">
+            <thead>
+              <tr>
+                <th width="7%">Roll No.</th>
+                <th width="9%">Student ID</th>
+                <th> Student Name</th>
+                <th width="10%"> Marks</th>
+                <th width="10%"> Max Marks</th>
+                <th width="20%"> Grade</th>
+                <th> Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {% for i in marks_list %}
+                <td>{{i.student.roll_no}}</td>
+                <td>
+                  <h4></h4>
+                </td>
+                <td>
+                  <h4>{{i.student.first_name}}</h4>
+                </td>
+                <td> <form action="/home/teachers/marks/{{i.id}}" method="POST">
+                  {% csrf_token %}
+                  {% for f in marks_form %}
+                  {{f.label}}  :  {{i.assigned_marks}}   {{f}}
+                  {% endfor %}
+                  <input type="submit" value="Submit">
+                </form> </td>
+                <td> {{i.exam.max_marks}} </td>
+                <td> A </td>
+                <td> <button>In Development!</button> </td>
+
+              </tr>
+              {% endfor %}
+
+
+            </tbody>
+          </table>
+
+          <style>
+            select {
+              border: 2px solid #7d84ab;
+              padding: 7px 10px;
+              border-radius: 5px;
+            }
+
+            select:focus {
+              outline: 2px solid #7d84ab;
+            }
+
+            #search-button {
+              background-color: #7d84ab;
+              border: none;
+              color: white;
+              padding: 15px 20px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+              border-radius: 12px;
+
+            }
+          </style>
+
+        </body>
+
+        </html>
+
+        <!-- Content End -->
+      </div>
+      </footer>
+
+<!-- {Project Task Schedular Accomplished} -->
+    </main>
+    <div class="overlay"></div>
+  </div>
+</div>
+
+
+<script>
+
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return typeof key === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (typeof input !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (typeof res !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+const ANIMATION_DURATION = 300;
+const SIDEBAR_EL = document.getElementById("sidebar");
+const SUB_MENU_ELS = document.querySelectorAll(".menu > ul > .menu-item.sub-menu");
+const FIRST_SUB_MENUS_BTN = document.querySelectorAll(".menu > ul > .menu-item.sub-menu > a");
+const INNER_SUB_MENUS_BTN = document.querySelectorAll(".menu > ul > .menu-item.sub-menu .menu-item.sub-menu > a");
+class PopperObject {
+  constructor(reference, popperTarget) {
+    _defineProperty(this, "instance", null);
+    _defineProperty(this, "reference", null);
+    _defineProperty(this, "popperTarget", null);
+    this.init(reference, popperTarget);
+  }
+  init(reference, popperTarget) {
+    this.reference = reference;
+    this.popperTarget = popperTarget;
+    this.instance = Popper.createPopper(this.reference, this.popperTarget, {
+      placement: "right",
+      strategy: "fixed",
+      resize: true,
+      modifiers: [{
+        name: "computeStyles",
+        options: {
+          adaptive: false
+        }
+      }, {
+        name: "flip",
+        options: {
+          fallbackPlacements: ["left", "right"]
+        }
+      }]
+    });
+    document.addEventListener("click", e => this.clicker(e, this.popperTarget, this.reference), false);
+    const ro = new ResizeObserver(() => {
+      this.instance.update();
+    });
+    ro.observe(this.popperTarget);
+    ro.observe(this.reference);
+  }
+  clicker(event, popperTarget, reference) {
+    if (SIDEBAR_EL.classList.contains("collapsed") && !popperTarget.contains(event.target) && !reference.contains(event.target)) {
+      this.hide();
+    }
+  }
+  hide() {
+    this.instance.state.elements.popper.style.visibility = "hidden";
+  }
+}
+class Poppers {
+  constructor() {
+    _defineProperty(this, "subMenuPoppers", []);
+    this.init();
+  }
+  init() {
+    SUB_MENU_ELS.forEach(element => {
+      this.subMenuPoppers.push(new PopperObject(element, element.lastElementChild));
+      this.closePoppers();
+    });
+  }
+  togglePopper(target) {
+    if (window.getComputedStyle(target).visibility === "hidden") target.style.visibility = "visible";else target.style.visibility = "hidden";
+  }
+  updatePoppers() {
+    this.subMenuPoppers.forEach(element => {
+      element.instance.state.elements.popper.style.display = "none";
+      element.instance.update();
+    });
+  }
+  closePoppers() {
+    this.subMenuPoppers.forEach(element => {
+      element.hide();
+    });
+  }
+}
+const slideUp = (target, duration = ANIMATION_DURATION) => {
+  const {
+    parentElement
+  } = target;
+  parentElement.classList.remove("open");
+  target.style.transitionProperty = "height, margin, padding";
+  target.style.transitionDuration = `${duration}ms`;
+  target.style.boxSizing = "border-box";
+  target.style.height = `${target.offsetHeight}px`;
+  target.offsetHeight;
+  target.style.overflow = "hidden";
+  target.style.height = 0;
+  target.style.paddingTop = 0;
+  target.style.paddingBottom = 0;
+  target.style.marginTop = 0;
+  target.style.marginBottom = 0;
+  window.setTimeout(() => {
+    target.style.display = "none";
+    target.style.removeProperty("height");
+    target.style.removeProperty("padding-top");
+    target.style.removeProperty("padding-bottom");
+    target.style.removeProperty("margin-top");
+    target.style.removeProperty("margin-bottom");
+    target.style.removeProperty("overflow");
+    target.style.removeProperty("transition-duration");
+    target.style.removeProperty("transition-property");
+  }, duration);
+};
+const slideDown = (target, duration = ANIMATION_DURATION) => {
+  const {
+    parentElement
+  } = target;
+  parentElement.classList.add("open");
+  target.style.removeProperty("display");
+  let {
+    display
+  } = window.getComputedStyle(target);
+  if (display === "none") display = "block";
+  target.style.display = display;
+  const height = target.offsetHeight;
+  target.style.overflow = "hidden";
+  target.style.height = 0;
+  target.style.paddingTop = 0;
+  target.style.paddingBottom = 0;
+  target.style.marginTop = 0;
+  target.style.marginBottom = 0;
+  target.offsetHeight;
+  target.style.boxSizing = "border-box";
+  target.style.transitionProperty = "height, margin, padding";
+  target.style.transitionDuration = `${duration}ms`;
+  target.style.height = `${height}px`;
+  target.style.removeProperty("padding-top");
+  target.style.removeProperty("padding-bottom");
+  target.style.removeProperty("margin-top");
+  target.style.removeProperty("margin-bottom");
+  window.setTimeout(() => {
+    target.style.removeProperty("height");
+    target.style.removeProperty("overflow");
+    target.style.removeProperty("transition-duration");
+    target.style.removeProperty("transition-property");
+  }, duration);
+};
+const slideToggle = (target, duration = ANIMATION_DURATION) => {
+  if (window.getComputedStyle(target).display === "none") return slideDown(target, duration);
+  return slideUp(target, duration);
+};
+const PoppersInstance = new Poppers();
+
+/**
+ * wait for the current animation to finish and update poppers position
+ */
+const updatePoppersTimeout = () => {
+  setTimeout(() => {
+    PoppersInstance.updatePoppers();
+  }, ANIMATION_DURATION);
+};
+
+/**
+ * sidebar collapse handler
+ */
+document.getElementById("btn-collapse").addEventListener("click", () => {
+  SIDEBAR_EL.classList.toggle("collapsed");
+  PoppersInstance.closePoppers();
+  if (SIDEBAR_EL.classList.contains("collapsed")) FIRST_SUB_MENUS_BTN.forEach(element => {
+    element.parentElement.classList.remove("open");
+  });
+  updatePoppersTimeout();
+});
+
+/**
+ * sidebar toggle handler (on break point )
+ */
+document.getElementById("btn-toggle").addEventListener("click", () => {
+  SIDEBAR_EL.classList.toggle("toggled");
+  updatePoppersTimeout();
+});
+
+/**
+ * toggle sidebar on overlay click
+ */
+document.getElementById("overlay").addEventListener("click", () => {
+  SIDEBAR_EL.classList.toggle("toggled");
+});
+const defaultOpenMenus = document.querySelectorAll(".menu-item.sub-menu.open");
+defaultOpenMenus.forEach(element => {
+  element.lastElementChild.style.display = "block";
+});
+
+/**
+ * handle top level submenu click
+ */
+FIRST_SUB_MENUS_BTN.forEach(element => {
+  element.addEventListener("click", () => {
+    if (SIDEBAR_EL.classList.contains("collapsed")) PoppersInstance.togglePopper(element.nextElementSibling);else {
+      const parentMenu = element.closest(".menu.open-current-submenu");
+      if (parentMenu) parentMenu.querySelectorAll(":scope > ul > .menu-item.sub-menu > a").forEach(el => window.getComputedStyle(el.nextElementSibling).display !== "none" && slideUp(el.nextElementSibling));
+      slideToggle(element.nextElementSibling);
+    }
+  });
+});
+
+/**
+ * handle inner submenu click
+ */
+INNER_SUB_MENUS_BTN.forEach(element => {
+  element.addEventListener("click", () => {
+    slideToggle(element.nextElementSibling);
+  });
+});
+
+  
+ 
+</script>

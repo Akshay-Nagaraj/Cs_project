@@ -1,0 +1,756 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Attendance</title>
+  <link rel="stylesheet" href="{% static 'attendance1.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css' rel='stylesheet'>
+	<link rel="stylesheet" href="Marks.css">
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap' rel='stylesheet'>
+    <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/core/popper.min.js"></script>
+    <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/core/bootstrap.min.js"></script></script>
+    <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/Chart.extension.js"></script>
+    <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/soft-ui-dashboard.min.js?v=1.0.2"></script>
+
+	<title></title>
+</head>
+
+
+<div class="layout has-sidebar fixed-sidebar fixed-header">
+  <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+    <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+    <div class="image-wrapper">
+      <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
+    </div>
+    <div class="sidebar-layout">
+      <div class="sidebar-header">
+        <div class="pro-sidebar-logo">
+          <div>E</div>
+          <h5>Eduportal</h5>
+        </div>
+      </div>
+      <div class="sidebar-content">
+        <nav class="menu open-current-submenu">
+          <ul>
+            <li class="menu-item">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-home-line"></i>
+                </span>
+                <span class="menu-title">Home</span>
+              </a>
+            </li>
+
+            <li class="menu-header"><span> GENERAL </span></li>
+            <li class="menu-item sub-menu">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-home-line"></i>
+                </span>
+                <span class="menu-title">Branched drop down</span>
+
+              </a>
+              <div class="sub-menu-list">
+                <ul>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Submenu 1</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Submenu 2</span>
+                    </a>
+                  </li>
+                  <li class="menu-item sub-menu">
+                    <a href="#">
+                      <span class="menu-title">Submenu 3 with branch</span>
+                    </a>
+                    <div class="sub-menu-list">
+                      <ul>
+                        <li class="menu-item">
+                          <a href="#">
+                            <span class="menu-title">Submenu 2.1</span>
+                          </a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="#">
+                            <span class="menu-title">Submenu 2.2</span>
+                          </a>
+                        </li>
+                        <li class="menu-item sub-menu">
+                          <a href="#">
+                            <span class="menu-title">Submenu 2.3 with branch</span>
+                          </a>
+                          <div class="sub-menu-list">
+                            <ul>
+                              <li class="menu-item">
+                                <a href="#">
+                                  <span class="menu-title">Submenu 3</span>
+                                </a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="#">
+                                  <span class="menu-title">Submenu 3.2</span>
+                                </a>
+                              </li>
+                              <li class="menu-item sub-menu">
+                                <a href="#">
+                                  <span class="menu-title">Submenu 3.3 with branch </span>
+                                  <span class="menu-suffix">&#x1F914;</span>
+                                </a>
+                                <div class="sub-menu-list">
+                                  <ul>
+                                    <li class="menu-item">
+                                      <a href="#">
+                                        <span class="menu-title">Final sub </span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item sub-menu">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-bar-chart-2-fill"></i>
+                </span>
+                <span class="menu-title">Marks</span>
+              </a>
+              <div class="sub-menu-list">
+                <ul>
+                  <li class="menu-item">
+                    <a href="marks.html">
+                      <span class="menu-title">Marks Entry</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Marks by Student</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+
+             <li class="menu-item sub-menu">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-bar-chart-2-fill"></i>
+                </span>
+                <span class="menu-title">Attendance</span>
+              </a>
+              <div class="sub-menu-list">
+                <ul>
+                  <li class="menu-item">
+                    <a href="att.html">
+                      <span class="menu-title">My Class</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Bulk Attendance</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-item sub-menu">
+              <a href="#">
+                <span class="menu-icon">
+                  <i class="ri-bar-chart-2-fill"></i>
+                </span>
+                <span class="menu-title">Search</span>
+              </a>
+              <div class="sub-menu-list">
+                <ul>
+                  <li class="menu-item">
+                    <a href="att.html">
+                      <span class="menu-title">Student Search</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">
+                      <span class="menu-title">Staff Search</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+
+
+
+            </li>
+            <li class="menu-header" style="padding-top: 20px"><span> Personal </span></li>
+            <li class="menu-item">
+              <a href="task.html">
+                <span class="menu-icon">
+                  <i class="ri-pencil-fill"></i>
+                </span>
+                <span class="menu-title">Calendar</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+  </aside>
+  <div id="overlay" class="overlay"></div>
+  <div class="layout">
+    <main class="content">
+      <div>
+        <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
+          <i class="ri-menu-line ri-xl"></i>
+        </a>
+
+       <div>
+        <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
+          <i class="ri-menu-line ri-xl"></i>
+        </a>
+        <!-- Heading -->
+        <h1 style="margin-bottom: 0">Attendance</h1>
+        <!-- Heading END -->
+
+        <!-- Content -->
+      
+
+        
+        
+        <main>
+      <div class="records table-responsive">
+
+        <div class="record-header">
+          <div class="add">
+            <span>Class</span>
+            <select name="" id="">
+              <option value="">-</option>
+            </select>
+
+            <span>Section</span>
+            <select name="" id="">
+              <option value="">-</option>
+            </select>
+
+            </input>
+          
+          
+        
+  
+
+  <button class="btn first" id="myBtn">Submit</button>
+
+          </div>
+        
+          <div class="browse">
+            <style>
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-right: 20%;
+                padding-top: 100px;
+                padding-left: 20%;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.4);
+              }
+
+              /* Modal Content */
+              .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+              }
+
+              /* The Close Button */
+              .close {
+                color: #212121;
+                float: right;
+                font-size: 40px;
+                font-weight: bold;
+              }
+
+              .close:hover,
+              .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+              }
+            </style>
+            </head>
+
+            <body>
+
+              
+
+              <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Are you sure you want to submit attendance</h2>
+                  <span></span>
+                  <button id="yes">Yes</button>
+                  <span> </span>
+                  <button id="no">No</button>
+
+                </div>
+
+              </div>
+
+              <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+                var ybtn = document.getElementById("yes");
+                var nbtn = document.getElementById("no");
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                  modal.style.display = "block";
+                }
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+                ybtn.onclick = function() {
+                  modal.style.display = "none";
+                }
+                nbtn.onclick = function() {
+                  modal.style.display = "none";
+                }
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+              </script>
+
+          </div>
+        </div>
+        <style>
+          /* Style the tab */
+          .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+          }
+
+          /* Style the buttons inside the tab */
+          .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+          }
+
+          /* Change background color of buttons on hover */
+          .tab button:hover {
+            background-color: #BBDEFB;
+          }
+
+          /* Create an active/current tablink class */
+          .tab button.active {
+            background-color: #81D4FA;
+          }
+
+          /* Style the tab content */
+          .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+          }
+        </style>
+        </head>
+
+        <body>
+
+          <div class="tab">
+            <button id="defaultOpen" , class="tablinks" onclick="openCity(event, 'London')">Morning</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Afternoon</button>
+          </div>
+
+          <div id="London" class="tabcontent">
+            <table width="100%">
+              <thead>
+                <tr>
+                  <th>Roll No.</th>
+                  <th>Date</th>
+                  <th> Student Name</th>
+                  <th> Class</th>
+                  <th> Attendance</th>
+                  <th> Percentage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {% for i in data %}
+                  <td>{{i.student.roll_no}}</td>
+                  <td>{{i.date}}</td>
+                  <td>
+
+                    <h4>{{i.student.first_name}}</h4>
+
+          </div>
+      </div>
+      </td>
+      
+      <td>
+        {{i.student.grade_and_section.Grade}}{{i.student.grade_and_section.Section}}
+      </td>
+      <td>
+        <button id="ab" , class="button buttona"><a href = 'attendance/morning_absent/{{i.id}}' style="color: inherit;"> Mark Absent </a></button>
+        <button id="ab" style="background-color: green;" class="button buttona"><a href = 'attendance/morning_present/{{i.id}}' style="color: inherit;"> Mark Present </a></button>
+      </td>
+      <td>
+
+      </td>
+
+      </tr>
+      {% endfor %}
+
+      </tbody>
+      </table>
+
+      </div>
+
+      <div id="Paris" class="tabcontent">
+        <table width="100%">
+          <thead>
+            <tr>
+              <th>Roll No.</th>
+              <th>Date</th>
+              <th> Student Name</th>
+              <th> Class</th>
+              <th> Attendance</th>
+              <th> Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {% for i in data %}
+              <td>{{i.student.roll_no}}</td>
+              <td>{{i.date}}</td>
+              <td>
+
+                <h4>{{i.student.first_name}}</h4>
+
+      </div>
+      </div>
+      </td>
+      <td>
+        {{i.student.grade_and_section.Grade}}{{i.student.grade_and_section.Section}}
+      </td>
+      <td>
+        <button id="abaf" , class="button buttona"><a href = 'attendance/afternoon_absent/{{i.id}}' style="color: inherit;"> Mark Absent </a></button>
+        <button id="ab" style="background-color: green;" class="button buttona"><a href = 'attendance/afternoon_present/{{i.id}}' style="color: inherit;"> Mark Present </a></button>
+        </script>
+      </td>
+      <td>
+
+      </td>
+
+      </tr>
+      {% endfor %}
+      </tbody>
+      </table>
+      </div>
+
+      </div>
+
+      <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+      </script>
+
+      </div>
+
+      </div>
+
+    </main>
+            
+        </main>
+        
+    </div>
+</body>
+
+
+        <!-- Content End -->
+      </div>
+      </footer>
+
+<!-- {Project Task Schedular Accomplished} -->
+    </main>
+    <div class="overlay"></div>
+  </div>
+</div>
+
+
+<script>
+
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return typeof key === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (typeof input !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (typeof res !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+const ANIMATION_DURATION = 300;
+const SIDEBAR_EL = document.getElementById("sidebar");
+const SUB_MENU_ELS = document.querySelectorAll(".menu > ul > .menu-item.sub-menu");
+const FIRST_SUB_MENUS_BTN = document.querySelectorAll(".menu > ul > .menu-item.sub-menu > a");
+const INNER_SUB_MENUS_BTN = document.querySelectorAll(".menu > ul > .menu-item.sub-menu .menu-item.sub-menu > a");
+class PopperObject {
+  constructor(reference, popperTarget) {
+    _defineProperty(this, "instance", null);
+    _defineProperty(this, "reference", null);
+    _defineProperty(this, "popperTarget", null);
+    this.init(reference, popperTarget);
+  }
+  init(reference, popperTarget) {
+    this.reference = reference;
+    this.popperTarget = popperTarget;
+    this.instance = Popper.createPopper(this.reference, this.popperTarget, {
+      placement: "right",
+      strategy: "fixed",
+      resize: true,
+      modifiers: [{
+        name: "computeStyles",
+        options: {
+          adaptive: false
+        }
+      }, {
+        name: "flip",
+        options: {
+          fallbackPlacements: ["left", "right"]
+        }
+      }]
+    });
+    document.addEventListener("click", e => this.clicker(e, this.popperTarget, this.reference), false);
+    const ro = new ResizeObserver(() => {
+      this.instance.update();
+    });
+    ro.observe(this.popperTarget);
+    ro.observe(this.reference);
+  }
+  clicker(event, popperTarget, reference) {
+    if (SIDEBAR_EL.classList.contains("collapsed") && !popperTarget.contains(event.target) && !reference.contains(event.target)) {
+      this.hide();
+    }
+  }
+  hide() {
+    this.instance.state.elements.popper.style.visibility = "hidden";
+  }
+}
+class Poppers {
+  constructor() {
+    _defineProperty(this, "subMenuPoppers", []);
+    this.init();
+  }
+  init() {
+    SUB_MENU_ELS.forEach(element => {
+      this.subMenuPoppers.push(new PopperObject(element, element.lastElementChild));
+      this.closePoppers();
+    });
+  }
+  togglePopper(target) {
+    if (window.getComputedStyle(target).visibility === "hidden") target.style.visibility = "visible";else target.style.visibility = "hidden";
+  }
+  updatePoppers() {
+    this.subMenuPoppers.forEach(element => {
+      element.instance.state.elements.popper.style.display = "none";
+      element.instance.update();
+    });
+  }
+  closePoppers() {
+    this.subMenuPoppers.forEach(element => {
+      element.hide();
+    });
+  }
+}
+const slideUp = (target, duration = ANIMATION_DURATION) => {
+  const {
+    parentElement
+  } = target;
+  parentElement.classList.remove("open");
+  target.style.transitionProperty = "height, margin, padding";
+  target.style.transitionDuration = `${duration}ms`;
+  target.style.boxSizing = "border-box";
+  target.style.height = `${target.offsetHeight}px`;
+  target.offsetHeight;
+  target.style.overflow = "hidden";
+  target.style.height = 0;
+  target.style.paddingTop = 0;
+  target.style.paddingBottom = 0;
+  target.style.marginTop = 0;
+  target.style.marginBottom = 0;
+  window.setTimeout(() => {
+    target.style.display = "none";
+    target.style.removeProperty("height");
+    target.style.removeProperty("padding-top");
+    target.style.removeProperty("padding-bottom");
+    target.style.removeProperty("margin-top");
+    target.style.removeProperty("margin-bottom");
+    target.style.removeProperty("overflow");
+    target.style.removeProperty("transition-duration");
+    target.style.removeProperty("transition-property");
+  }, duration);
+};
+const slideDown = (target, duration = ANIMATION_DURATION) => {
+  const {
+    parentElement
+  } = target;
+  parentElement.classList.add("open");
+  target.style.removeProperty("display");
+  let {
+    display
+  } = window.getComputedStyle(target);
+  if (display === "none") display = "block";
+  target.style.display = display;
+  const height = target.offsetHeight;
+  target.style.overflow = "hidden";
+  target.style.height = 0;
+  target.style.paddingTop = 0;
+  target.style.paddingBottom = 0;
+  target.style.marginTop = 0;
+  target.style.marginBottom = 0;
+  target.offsetHeight;
+  target.style.boxSizing = "border-box";
+  target.style.transitionProperty = "height, margin, padding";
+  target.style.transitionDuration = `${duration}ms`;
+  target.style.height = `${height}px`;
+  target.style.removeProperty("padding-top");
+  target.style.removeProperty("padding-bottom");
+  target.style.removeProperty("margin-top");
+  target.style.removeProperty("margin-bottom");
+  window.setTimeout(() => {
+    target.style.removeProperty("height");
+    target.style.removeProperty("overflow");
+    target.style.removeProperty("transition-duration");
+    target.style.removeProperty("transition-property");
+  }, duration);
+};
+const slideToggle = (target, duration = ANIMATION_DURATION) => {
+  if (window.getComputedStyle(target).display === "none") return slideDown(target, duration);
+  return slideUp(target, duration);
+};
+const PoppersInstance = new Poppers();
+
+/**
+ * wait for the current animation to finish and update poppers position
+ */
+const updatePoppersTimeout = () => {
+  setTimeout(() => {
+    PoppersInstance.updatePoppers();
+  }, ANIMATION_DURATION);
+};
+
+/**
+ * sidebar collapse handler
+ */
+document.getElementById("btn-collapse").addEventListener("click", () => {
+  SIDEBAR_EL.classList.toggle("collapsed");
+  PoppersInstance.closePoppers();
+  if (SIDEBAR_EL.classList.contains("collapsed")) FIRST_SUB_MENUS_BTN.forEach(element => {
+    element.parentElement.classList.remove("open");
+  });
+  updatePoppersTimeout();
+});
+
+/**
+ * sidebar toggle handler (on break point )
+ */
+document.getElementById("btn-toggle").addEventListener("click", () => {
+  SIDEBAR_EL.classList.toggle("toggled");
+  updatePoppersTimeout();
+});
+
+/**
+ * toggle sidebar on overlay click
+ */
+document.getElementById("overlay").addEventListener("click", () => {
+  SIDEBAR_EL.classList.toggle("toggled");
+});
+const defaultOpenMenus = document.querySelectorAll(".menu-item.sub-menu.open");
+defaultOpenMenus.forEach(element => {
+  element.lastElementChild.style.display = "block";
+});
+
+/**
+ * handle top level submenu click
+ */
+FIRST_SUB_MENUS_BTN.forEach(element => {
+  element.addEventListener("click", () => {
+    if (SIDEBAR_EL.classList.contains("collapsed")) PoppersInstance.togglePopper(element.nextElementSibling);else {
+      const parentMenu = element.closest(".menu.open-current-submenu");
+      if (parentMenu) parentMenu.querySelectorAll(":scope > ul > .menu-item.sub-menu > a").forEach(el => window.getComputedStyle(el.nextElementSibling).display !== "none" && slideUp(el.nextElementSibling));
+      slideToggle(element.nextElementSibling);
+    }
+  });
+});
+
+/**
+ * handle inner submenu click
+ */
+INNER_SUB_MENUS_BTN.forEach(element => {
+  element.addEventListener("click", () => {
+    slideToggle(element.nextElementSibling);
+  });
+});
+
+  
+ 
+</script>
+<!-- partial -->
+  
+</body>
+</html>
